@@ -1,6 +1,6 @@
 var db = require(__dirname + "/database.js"),
     mongodb = require("mongodb"),
-    objectid = mongodb.BSONPure.ObjectID,
+    objectid = mongodb.ObjectID,
     md5 = require(__dirname + "/md5.js"),
     utils = require(__dirname + "/utils.js"),
     datetime = require(__dirname + "/datetime.js"),

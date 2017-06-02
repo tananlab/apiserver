@@ -2,3 +2,4 @@
 node_modules
 .mongodb
 .c9
+.idea

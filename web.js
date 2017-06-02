@@ -1,9 +1,10 @@
+var env = require('node-env-file');
+env(__dirname + '/.env');
 var express = require("express"),
     bodyParser = require('body-parser'),
     querystring = require("querystring"),
     util = require("util"),
     v1 = require(__dirname + "/v1/router.js");
-    
 require(__dirname + "/api/database.js"), // to trigger the setup
 require(__dirname + "/api/ping.js"); // to keep the app awake
 	
@@ -53,6 +54,7 @@ if ('production' == app.get('env')) {
 
 // start
 var port = process.env.PORT || 3000;
+console.log(port);
 
 app.listen(port, function() {
   console.log("Listening on " + port + ", env: " + process.env.NODE_ENV + ", local: " + (process.env.local || false));
