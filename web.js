@@ -73,5 +73,6 @@ router.all("/crossdomain.xml", function(request, response) {
 router.all("/v1", function(req, res, next) {
     v1.router(req, res, next);
 });
-
+app.use(express.static('public'))
 app.use("/", router);
+

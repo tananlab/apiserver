@@ -10,7 +10,6 @@ module.exports = {
     lookup: function(payload, request, response, testcallback) {
         
         var country = api.geoip.lookup(payload.ip);
-        
         if(country.error) {
             
             if(testcallback) {

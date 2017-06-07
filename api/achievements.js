@@ -309,7 +309,7 @@ var achievements = module.exports = {
      * @param callback function(error, errorcode)
      */
     save: function(options, callback) {
-		
+		console.log(achievementlist);
 		if(!options.playerid) {
 			return callback("Missing playerid (api.achievements.save:129)", errorcodes.NoPlayerId);
 		}
@@ -425,7 +425,7 @@ function refreshCache() {
         	noupsert = { upsert: false };
         	
         function ignoreResponse(){}
-        
+
         for(var i=0, len=achlist.length; i<len; i++) {
 			var achievement = achlist[i].toObject();
 			var pk = achievement.publickey;

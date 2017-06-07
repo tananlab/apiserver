@@ -50,7 +50,7 @@ module.exports = {
 			port: 443,   
 			path: "/1.3/?method=listSubscribe",  
 			method: "POST",
-			secureProtocol: "SSLv3_method",
+			secureProtocol: "TLSv1_method",
 			headers: { 
 				"Content-Type": "application/x-www-form-urlencoded",
 				"Content-Length": payload.length,

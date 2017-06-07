@@ -36,7 +36,7 @@ function refreshCache() {
         
         if(error) {
             console.log("GAMEVARS failed to retrieve results from mongodb: " + error);
-            return setTimeout(refreshCache, 1000);
+            return setTimeout(refreshCache, 3000);
         }
         
         vars.forEach(function(gv) {
